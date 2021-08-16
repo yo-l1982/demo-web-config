@@ -19,3 +19,5 @@ spec:
         image: webbutvecklinghelsingborg/gitops:latest
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: registry-login
