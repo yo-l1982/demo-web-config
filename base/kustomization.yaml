@@ -4,7 +4,7 @@ kind: Kustomization
 images:
 - name: webbutvecklinghelsingborg/gitops
   newName: webbutvecklinghelsingborg/gitops
-  newTag: v3
+  newTag: 6854a6a8d1bd58f07cb48591f2b108ee29363f24
 
 resources:
 - deployment.yaml

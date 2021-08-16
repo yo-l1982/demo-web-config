@@ -27,7 +27,7 @@ spec:
         app: demo-web
     spec:
       containers:
-      - image: webbutvecklinghelsingborg/gitops:v3
+      - image: webbutvecklinghelsingborg/gitops:6854a6a8d1bd58f07cb48591f2b108ee29363f24
         name: demo-web
         ports:
         - containerPort: 80
