@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: demo-web-deployment
 spec:
-  replicas: 3
+  replicas: 8
   template:
     spec:
       containers:
