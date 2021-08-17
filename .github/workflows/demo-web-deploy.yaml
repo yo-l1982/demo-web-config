@@ -1,0 +1,23 @@
+name: Deploy Demo Web
+
+on:
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: SHA of recently built image tag    
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: imranismail/setup-kustomize@v1
+      - run: |
+          (cd overlays/dev && kustomize edit set image webbutvecklinghelsingborg/gitops=webbutvecklinghelsingborg/gitops:${{ github.event.inputs.sha }})
+          git config user.name gitops-builder
+          git config user.email gitops-builder@helsingborg.se
+          git add .
+          git commit -m "Updated image tag to updated build tag ${{ github.event.inputs.sha }})"
+          git push origin master
