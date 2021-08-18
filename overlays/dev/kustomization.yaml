@@ -7,4 +7,4 @@ resources:
 images:
 - name: webbutvecklinghelsingborg/gitops
   newName: webbutvecklinghelsingborg/gitops
-  newTag: 92f9e94d041a0c6857597667ad69d505d075f65c
+  newTag: 2bca94d01ceff24700f9fa22155dad3ddb62139d
