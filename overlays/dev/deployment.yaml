@@ -4,6 +4,8 @@ metadata:
   name: demo-web-deployment
 spec:
   replicas: 8
+  strategy:
+    type: Recreate
   template:
     spec:
       containers:
