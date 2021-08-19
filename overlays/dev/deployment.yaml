@@ -5,7 +5,9 @@ metadata:
 spec:
   replicas: 8
   strategy:
-    type: Recreate
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
   template:
     spec:
       containers:
